@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Password Generator",
-    "slug": "PasswordGenerator",
+    "slug": "password-generator",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -28,7 +28,8 @@
         "monochromeImage": "./assets/icons/adaptive-icon.png"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.arturylab.PasswordGenerator"
     },
     "web": {
       "output": "static",
