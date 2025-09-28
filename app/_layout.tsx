@@ -1,5 +1,6 @@
+import { About } from "@/app/about";
 import { GluestackUIProvider } from '@/components/ui/gluestack-ui-provider';
-import { Icon, MoonIcon, SunIcon } from '@/components/ui/icon';
+import { Icon, InfoIcon, MoonIcon, SunIcon } from '@/components/ui/icon';
 import '@/global.css';
 import { useFonts } from 'expo-font';
 import { Stack } from "expo-router";
@@ -15,9 +16,18 @@ SplashScreen.setOptions({
 
 export default function RootLayout() {
   const [colorMode, setColorMode] = useState<'light' | 'dark'>('light');
+  const [showAbout, setShowAbout] = useState(false);
 
   const toggleColorMode = () => {
     setColorMode(colorMode === 'light' ? 'dark' : 'light');
+  };
+
+  const handleAboutPress = () => {
+    setShowAbout(true);
+  };
+
+  const handleAboutClose = () => {
+    setShowAbout(false);
   };
 
   const [loaded] = useFonts({
@@ -52,14 +62,21 @@ export default function RootLayout() {
           options={{
             title: "Password Generator",
             headerTitleAlign: 'center',
-            headerRight: () => (
+            headerLeft: () => (
               <TouchableOpacity onPress={toggleColorMode} className='ml-4'>
                 <Icon size={'xl'} as={colorMode === 'light' ? SunIcon : MoonIcon} className='mr-4' />
+              </TouchableOpacity>
+            ),
+            headerRight: () => (
+              <TouchableOpacity onPress={handleAboutPress} className='mr-4'>
+                <Icon size={'xl'} as={InfoIcon} className='ml-4' />
               </TouchableOpacity>
             ),
           }}
         />
       </Stack>
+      
+      <About isOpen={showAbout} onClose={handleAboutClose} />
     </GluestackUIProvider>
   );
 }
