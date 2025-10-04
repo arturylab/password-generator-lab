@@ -18,7 +18,7 @@ interface AboutProps {
   onClose?: () => void;
 }
 
-export function About({ isOpen = false, onClose }: AboutProps) {
+export default function About({ isOpen = false, onClose }: AboutProps) {
   return (
     <Drawer
       isOpen={isOpen}

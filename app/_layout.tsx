@@ -1,4 +1,4 @@
-import { About } from "@/app/about";
+import About from "@/app/about";
 import { GluestackUIProvider } from '@/components/ui/gluestack-ui-provider';
 import { Icon, InfoIcon, MoonIcon, SunIcon } from '@/components/ui/icon';
 import '@/global.css';
@@ -8,6 +8,7 @@ import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect, useState } from 'react';
 import { TouchableOpacity } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 SplashScreen.setOptions({
   duration: 1000,
@@ -45,38 +46,40 @@ export default function RootLayout() {
   }
 
   return (
-    <GluestackUIProvider mode={colorMode}>
-      <StatusBar style={colorMode === 'dark' ? 'light' : 'dark'} />
-      <Stack screenOptions={{ 
-        headerStyle: { backgroundColor: '#4DE3AF' },
-        headerTitleStyle: {
-          fontWeight: 'bold',
-          color: colorMode === 'dark' ? 'light' : 'dark',
-        },
-        contentStyle: { 
-          backgroundColor: colorMode === 'dark' ? 'black' : 'white' 
-        }
-      }}>
-        <Stack.Screen
-          name="index"
-          options={{
-            title: "Password Generator Lab",
-            headerTitleAlign: 'center',
-            headerLeft: () => (
-              <TouchableOpacity onPress={toggleColorMode} className='ml-4'>
-                <Icon size={'xl'} as={colorMode === 'light' ? SunIcon : MoonIcon} className='mr-4' />
-              </TouchableOpacity>
-            ),
-            headerRight: () => (
-              <TouchableOpacity onPress={handleAboutPress} className='mr-4'>
-                <Icon size={'xl'} as={InfoIcon} className='ml-4' />
-              </TouchableOpacity>
-            ),
-          }}
-        />
-      </Stack>
-      
-      <About isOpen={showAbout} onClose={handleAboutClose} />
-    </GluestackUIProvider>
+    <SafeAreaProvider>
+      <GluestackUIProvider mode={colorMode}>
+        <StatusBar style={colorMode === 'dark' ? 'light' : 'dark'} />
+        <Stack screenOptions={{ 
+          headerStyle: { backgroundColor: '#4DE3AF' },
+          headerTitleStyle: {
+            fontWeight: 'bold',
+            color: colorMode === 'dark' ? 'light' : 'dark',
+          },
+          contentStyle: { 
+            backgroundColor: colorMode === 'dark' ? 'black' : 'white' 
+          }
+        }}>
+          <Stack.Screen
+            name="index"
+            options={{
+              title: "Password Generator Lab",
+              headerTitleAlign: 'center',
+              headerLeft: () => (
+                <TouchableOpacity onPress={toggleColorMode} className='ml-4'>
+                  <Icon size={'xl'} as={colorMode === 'light' ? SunIcon : MoonIcon} className='mr-4' />
+                </TouchableOpacity>
+              ),
+              headerRight: () => (
+                <TouchableOpacity onPress={handleAboutPress} className='mr-4'>
+                  <Icon size={'xl'} as={InfoIcon} className='ml-4' />
+                </TouchableOpacity>
+              ),
+            }}
+          />
+        </Stack>
+        
+        <About isOpen={showAbout} onClose={handleAboutClose} />
+      </GluestackUIProvider>
+    </SafeAreaProvider>
   );
 }
