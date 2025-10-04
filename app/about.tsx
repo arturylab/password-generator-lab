@@ -1,13 +1,13 @@
 import { Box } from '@/components/ui/box';
 import { Button, ButtonText } from '@/components/ui/button';
 import {
-    Drawer,
-    DrawerBackdrop,
-    DrawerBody,
-    DrawerCloseButton,
-    DrawerContent,
-    DrawerFooter,
-    DrawerHeader,
+  Drawer,
+  DrawerBackdrop,
+  DrawerBody,
+  DrawerCloseButton,
+  DrawerContent,
+  DrawerFooter,
+  DrawerHeader,
 } from '@/components/ui/drawer';
 import { Heading } from '@/components/ui/heading';
 import { Text } from '@/components/ui/text';
@@ -29,7 +29,7 @@ export function About({ isOpen = false, onClose }: AboutProps) {
       <DrawerBackdrop />
       <DrawerContent>
         <DrawerHeader>
-          <Heading size="lg" className='text-[#4DE3AF]'>About Password Generator</Heading>
+          <Heading size="lg" className='text-[#4DE3AF]'>About Password Generator Lab</Heading>
           <DrawerCloseButton>
           </DrawerCloseButton>
         </DrawerHeader>

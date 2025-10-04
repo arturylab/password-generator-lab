@@ -60,7 +60,7 @@ export default function RootLayout() {
         <Stack.Screen
           name="index"
           options={{
-            title: "Password Generator",
+            title: "Password Generator Lab",
             headerTitleAlign: 'center',
             headerLeft: () => (
               <TouchableOpacity onPress={toggleColorMode} className='ml-4'>

@@ -1,16 +1,16 @@
 {
   "expo": {
-    "name": "Password Generator",
-    "slug": "password-generator",
+    "name": "Password Generator Lab",
+    "slug": "password-generator-lab",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "passwordgenerator",
+    "scheme": "passwordgeneratorlab",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.arturylab.PasswordGenerator",
+      "bundleIdentifier": "com.arturylab.PasswordGeneratorLab",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
       },
@@ -29,7 +29,7 @@
       },
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false,
-      "package": "com.arturylab.PasswordGenerator"
+      "package": "com.arturylab.PasswordGeneratorLab"
     },
     "web": {
       "output": "static",
@@ -55,12 +55,12 @@
       "typedRoutes": true,
       "reactCompiler": true
     },
+    "owner": "arturylab",
     "extra": {
       "router": {},
       "eas": {
-        "projectId": "c27c8a57-88dd-46a2-8345-344ad8bc990c"
+        "projectId": "0723deab-62ea-4f9a-886c-020aff3326ed"
       }
-    },
-    "owner": "arturylab"
+    }
   }
 }
