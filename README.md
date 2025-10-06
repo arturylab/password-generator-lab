@@ -1,50 +1,142 @@
-# Welcome to your Expo app 👋
+# Password Generator Lab
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A secure, privacy-focused password generator mobile application built with Expo and React Native.
 
-## Get started
+## Features
 
-1. Install dependencies
+- **Secure Password Generation**: Generate strong, random passwords directly on your device
+- **Customizable Options**: 
+  - Adjustable password length (4-32 characters)
+  - Toggle lowercase letters (a-z)
+  - Toggle uppercase letters (A-Z)
+  - Toggle numbers (0-9)
+  - Toggle symbols (!@#$%^&*()_+[]{}|;:,.<>?)
+- **Dark Mode Support**: Switch between light and dark themes
+- **One-Tap Copy**: Easily copy generated passwords to clipboard
+- **Privacy First**: No data collection, storage, or transmission
+- **Offline Functionality**: Works completely offline
 
-   ```bash
-   npm install
-   ```
+## Screenshots
 
-2. Start the app
+*[Add screenshots here]*
 
-   ```bash
-   npx expo start
-   ```
+## Tech Stack
 
-In the output, you'll find options to open the app in a
+- **Framework**: Expo / React Native
+- **UI Library**: Gluestack UI
+- **Styling**: NativeWind (Tailwind CSS for React Native)
+- **Navigation**: Expo Router
+- **Language**: TypeScript
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Installation
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### Prerequisites
 
-## Get a fresh project
+- Node.js (v16 or higher)
+- npm or yarn
+- Expo CLI (`npm install -g expo-cli`)
 
-When you're ready, run:
+### Setup
 
+1. Clone the repository:
 ```bash
-npm run reset-project
+git clone https://github.com/yourusername/password-generator-lab.git
+cd password-generator-lab
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
 
-## Learn more
+3. Start the development server:
+```bash
+npx expo start
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+4. Run on your device:
+   - Install Expo Go app on your iOS or Android device
+   - Scan the QR code from the terminal
+   - Or press `i` for iOS simulator or `a` for Android emulator
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Project Structure
 
-## Join the community
+```
+password-generator-lab/
+├── app/
+│   ├── _layout.tsx       # Root layout with navigation and theme
+│   ├── index.tsx         # Main password generator screen
+│   └── about.tsx         # About/Info drawer
+├── components/
+│   └── ui/              # Gluestack UI components
+├── assets/
+│   └── fonts/           # Custom fonts
+└── global.css           # Global styles
+```
 
-Join our community of developers creating universal apps.
+## Usage
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+1. **Generate Password**: The app automatically generates a password on launch
+2. **Customize**: Use the switches to enable/disable character types
+3. **Adjust Length**: Use the slider to set password length (4-32 characters)
+4. **Regenerate**: Tap the "Generate" button to create a new password
+5. **Copy**: Tap the "Copy" button to copy the password to clipboard
+6. **Toggle Theme**: Tap the sun/moon icon in the header to switch themes
+7. **About**: Tap the info icon to view app information and privacy policy
+
+## Security & Privacy
+
+- All password generation happens locally on your device
+- No passwords are stored, logged, or transmitted
+- No analytics or tracking
+- No internet connection required
+- Open source and transparent
+
+## Building for Production
+
+### iOS
+
+```bash
+eas build --platform ios
+```
+
+### Android
+
+```bash
+eas build --platform android
+```
+
+*Note: Requires EAS CLI and account. See [Expo docs](https://docs.expo.dev/build/introduction/) for details.*
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Contact
+
+**Email**: arturylab@gmail.com
+
+Your feedback and suggestions are highly appreciated!
+
+## Acknowledgments
+
+- Built with [Expo](https://expo.dev/)
+- UI components by [Gluestack UI](https://ui.gluestack.io/)
+- Icons from Lucide React
+
+---
+
+**Version**: 1.0.0  
+**Copyright**: © 2025 arturylab. All rights reserved.
