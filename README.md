@@ -18,7 +18,9 @@ A secure, privacy-focused password generator mobile application built with Expo 
 
 ## Screenshots
 
-*[Add screenshots here]*
+<p align="center">
+  <img src="assets/images/screenshot.png" alt="Password Generator Lab Screenshot" width="300"/>
+</p>
 
 ## Tech Stack
 
